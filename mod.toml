@@ -1,0 +1,8 @@
+name = "KSI-TestProvider"
+
+[StarMap]
+EntryAssembly = "KSI.TestProvider"
+
+[[StarMap.ModDependencies]]
+ModId = "KSI-Core"
+ImportedAssemblies = ["KSI.Core.Api"]

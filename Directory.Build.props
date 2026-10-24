@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <KsaReferencePath Condition="'$(KsaReferencePath)' == ''">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\Import'))</KsaReferencePath>
+    <RestoreAdditionalProjectSources Condition="Exists('$(MSBuildThisFileDirectory)..\KSI-Core\artifacts\packages')">$(MSBuildThisFileDirectory)..\KSI-Core\artifacts\packages;$(RestoreAdditionalProjectSources)</RestoreAdditionalProjectSources>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(KsaReferencePath)\KSA.dll" Private="false" />
+    <Reference Include="$(KsaReferencePath)\Brutal.*.dll" Private="false" />
+  </ItemGroup>
+</Project>

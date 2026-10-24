@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>KSI.TestProvider</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="StarMap.API" Version="0.3.6" />
+    <PackageReference Include="KSI.Core.Api" Version="0.2.1" IncludeAssets="compile;build;analyzers" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="mod.toml" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="KSI.TestProvider.ksi-provider.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
